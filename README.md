@@ -1,3 +1,73 @@
+# Library API
+
+## Overview
+
+This API simulates an library, where you can manage books and their authors.
+
+Authors are parsed from a CSV file and inserted into the database.
+
+You can manage books and authors using the API operations provided.
+
+## Production
+Application is running in [https://library-olist.herokuapp.com/](https://library-olist.herokuapp.com/swagger/)
+
+API documentation is available in the swagger endpoint from the API:
+[https://library-olist.herokuapp.com/swagger/](https://library-olist.herokuapp.com/swagger/)
+
+## Requirements
+* Python >= 3.6
+* Django==3.0.2
+* djangorestframework==3.11.0
+* django-filter==2.2.0
+* django-environ==0.4.5
+* drf-yasg==1.17.0
+
+## Usage
+
+* Clone this repository.
+* Enter the project folder
+* Run
+```shell
+$ pip install -r requirements.txt
+```
+* Enter the library_project folder and create a .env file just like the .env.example provided in the same folder. Template is the following
+```env
+SECRET_KEY=YOUR_SECRET_KEY
+ALLOWED_HOSTS=["localhost", "example2.com"]
+DEBUG=on
+TIME_ZONE='America/Sao_Paulo'
+USE_TZ=false
+PAGE_SIZE=25
+```
+* Migrate the database, running
+```shell
+$ python manage.py migrate
+```
+* In the start of the project, the database will be empty, to populate authors table, you need to provide a .csv file containing the authors name. Template must be like:
+```csv
+name
+Graciliano Ramos
+Guimarães Rosa
+```
+then run:
+```
+$ python manage.py populate_authors YOUR_FILE.csv
+```
+
+* To run the server, just run:
+```shell
+$ python manage.py runserver
+```
+
+## Testing
+
+To run the tests, just run, inside the library_project folder:
+
+```shell
+$ python manage.py test
+```
+
+-------------
 # Work at Olist
 
 [Olist](https://olist.com/) is a company that offers an integration platform for sellers and marketplaces allowing them to sell their products across multiple channels.
