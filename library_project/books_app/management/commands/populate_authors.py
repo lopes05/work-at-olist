@@ -14,10 +14,10 @@ class Command(BaseCommand):
         csv_file = options.get('csv_entry')
         try:
             csv_content = csv.DictReader(csv_file)
-            authors = (Author(name=author_row['name'].strip()) for author_row in csv_content)
-        except:
+            batch = [Author(name=author_row['name'].strip()) for author_row in csv_content]
+        except Exception as e:
             self.stderr.write("Error on document format.")
+            return
         
-        batch = list(authors)
         res = Author.objects.bulk_create(batch, ignore_conflicts=True)
         self.stdout.write("Finish authors creation")

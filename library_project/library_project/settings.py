@@ -33,9 +33,6 @@ SECRET_KEY = env_configuration.str('SECRET_KEY')
 DEBUG = env_configuration.bool('DEBUG')
 
 ALLOWED_HOSTS = ast.literal_eval(env_configuration.str('ALLOWED_HOSTS'))
-print(ALLOWED_HOSTS)
-
-
 
 # Application definition
 
