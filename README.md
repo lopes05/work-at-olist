@@ -67,6 +67,11 @@ To run the tests, just run, inside the library_project folder:
 $ python manage.py test
 ```
 
+
+## Extra Information
+
+This project was built in a computer using a computer with Debian 10, Python 3.7, and virtualenv.
+
 -------------
 # Work at Olist
 
