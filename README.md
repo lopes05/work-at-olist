@@ -9,7 +9,7 @@ Authors are parsed from a CSV file and inserted into the database.
 You can manage books and authors using the API operations provided.
 
 ## Production
-Application is running in [https://library-olist.herokuapp.com/](https://library-olist.herokuapp.com/swagger/)
+Application is running in [https://library-olist.herokuapp.com/](https://library-olist.herokuapp.com/)
 
 API documentation is available in the swagger endpoint from the API:
 [https://library-olist.herokuapp.com/swagger/](https://library-olist.herokuapp.com/swagger/)
